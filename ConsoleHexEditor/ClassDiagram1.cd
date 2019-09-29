@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="ConsoleHexEditor.Program">
+    <Position X="0.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.FileReader">
+    <Position X="18.5" Y="35.75" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>ABgAAAAAAAACAAIAABACAAAQABAEAAAAAIAAEAABAAA=</HashCode>
+      <FileName>FileReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.HexElement">
+    <Position X="23.25" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAABAAAAAAAEAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>HexElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.PageElement">
+    <Position X="20" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PageElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.Application">
+    <Position X="1.5" Y="30" Width="5.75" />
+    <AssociationLine Name="encodingChooser" Type="ConsoleHexEditor.EncodingChooser" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.312" Y="30" />
+        <Point X="2.312" Y="21.923" />
+        <Point X="4.5" Y="21.923" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="inputWatcher" Type="ConsoleHexEditor.IInputWatcher" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.5" Y="30" />
+        <Point X="1.5" Y="29.625" />
+        <Point X="1.406" Y="29.625" />
+        <Point X="1.406" Y="21.391" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="pageManager" Type="ConsoleHexEditor.PageManager" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5" Y="30" />
+        <Point X="5" Y="22.767" />
+        <Point X="12.625" Y="22.767" />
+        <Point X="12.625" Y="20.824" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="editor" Type="ConsoleHexEditor.EditorForHexaElements" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.25" Y="31.129" />
+        <Point X="15.948" Y="31.129" Type="JumpStart" />
+        <Point X="16.114" Y="31.129" Type="JumpEnd" />
+        <Point X="18.229" Y="31.129" Type="JumpStart" />
+        <Point X="18.396" Y="31.129" Type="JumpEnd" />
+        <Point X="20.625" Y="31.129" />
+        <Point X="20.625" Y="12.382" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="codePageValidator" Type="ConsoleHexEditor.InputValidatorForChangingCodePage" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.875" Y="30" />
+        <Point X="6.875" Y="27.354" />
+        <Point X="8.5" Y="27.354" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="gotoValidator" Type="ConsoleHexEditor.InputValidatorForGoTo" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.25" Y="33.826" />
+        <Point X="16.031" Y="33.826" />
+        <Point X="16.031" Y="28.209" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="normalValidator" Type="ConsoleHexEditor.InputValidatorForNormalView" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.25" Y="30.627" />
+        <Point X="7.55" Y="30.627" />
+        <Point X="7.55" Y="30.557" />
+        <Point X="15.948" Y="30.557" Type="JumpStart" />
+        <Point X="16.114" Y="30.557" Type="JumpEnd" />
+        <Point X="16.394" Y="30.557" />
+        <Point X="16.394" Y="29.072" />
+        <Point X="18.229" Y="29.072" Type="JumpStart" />
+        <Point X="18.396" Y="29.072" Type="JumpEnd" />
+        <Point X="19.313" Y="29.072" />
+        <Point X="19.313" Y="28.432" />
+        <Point X="20.542" Y="28.432" Type="JumpStart" />
+        <Point X="20.708" Y="28.432" Type="JumpEnd" />
+        <Point X="20.75" Y="28.432" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="textValidator" Type="ConsoleHexEditor.InputValidatorForTextMode" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.25" Y="31.443" />
+        <Point X="15.948" Y="31.443" Type="JumpStart" />
+        <Point X="16.114" Y="31.443" Type="JumpEnd" />
+        <Point X="18.229" Y="31.443" Type="JumpStart" />
+        <Point X="18.396" Y="31.443" Type="JumpEnd" />
+        <Point X="26.542" Y="31.443" Type="JumpStart" />
+        <Point X="26.708" Y="31.443" Type="JumpEnd" />
+        <Point X="28.573" Y="31.443" Type="JumpStart" />
+        <Point X="28.74" Y="31.443" Type="JumpEnd" />
+        <Point X="29.01" Y="31.443" />
+        <Point X="29.01" Y="22.852" />
+        <Point X="29.25" Y="22.852" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="userInputCreator" Type="ConsoleHexEditor.UserInputCreator" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.25" Y="30.939" />
+        <Point X="15.948" Y="30.939" Type="JumpStart" />
+        <Point X="16.114" Y="30.939" Type="JumpEnd" />
+        <Point X="18.229" Y="30.939" Type="JumpStart" />
+        <Point X="18.396" Y="30.939" Type="JumpEnd" />
+        <Point X="20.542" Y="30.939" Type="JumpStart" />
+        <Point X="20.708" Y="30.939" Type="JumpEnd" />
+        <Point X="26.542" Y="30.939" Type="JumpStart" />
+        <Point X="26.708" Y="30.939" Type="JumpEnd" />
+        <Point X="28.573" Y="30.939" Type="JumpStart" />
+        <Point X="28.74" Y="30.939" Type="JumpEnd" />
+        <Point X="28.927" Y="30.939" Type="JumpStart" />
+        <Point X="29.093" Y="30.939" Type="JumpEnd" />
+        <Point X="31.042" Y="30.939" Type="JumpStart" />
+        <Point X="31.208" Y="30.939" Type="JumpEnd" />
+        <Point X="35.542" Y="30.939" Type="JumpStart" />
+        <Point X="35.708" Y="30.939" Type="JumpEnd" />
+        <Point X="39.542" Y="30.939" Type="JumpStart" />
+        <Point X="39.708" Y="30.939" Type="JumpEnd" />
+        <Point X="41.875" Y="30.939" />
+        <Point X="41.875" Y="27.046" />
+        <Point X="42.25" Y="27.046" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AUBiAAAAAGBQkARAAASAAQUAwQARGgIAIEAVAQgIgAA=</HashCode>
+      <FileName>Application.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="encodingChooser" />
+      <Field Name="fileWatcher" />
+      <Field Name="inputWatcher" />
+      <Field Name="renderer" />
+      <Field Name="textElementCreator" />
+      <Field Name="windowWatcher" />
+      <Field Name="pageManager" />
+      <Field Name="editor" />
+      <Field Name="codePageValidator" />
+      <Field Name="exitMenuValidator" />
+      <Field Name="gotoValidator" />
+      <Field Name="normalValidator" />
+      <Field Name="partialValidator" />
+      <Field Name="shortcutValidator" />
+      <Field Name="textValidator" />
+      <Field Name="userInputCreator" />
+      <Field Name="fileSearchingValidator" />
+      <Field Name="gotoInput" />
+      <Field Name="partialInputCreator" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ConsoleHexEditor.EditorForHexaElements">
+    <Position X="16.25" Y="8" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAEBAAQAAAgEQACAAAAAAIAAAgBACAAAAAABAA=</HashCode>
+      <FileName>EditorForHexaElements.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Page" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ConsoleHexEditor.WindowWatcher">
+    <Position X="3.25" Y="40.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BAAAABAAAAAAAAEAAgAAAAAAAAAAAAAAAAAAAAAQAIA=</HashCode>
+      <FileName>WindowWatcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.KeyboardWatcher">
+    <Position X="5.5" Y="16.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAACAAAAEAAAAAQAAAAAAAQAAAIAAAAAAAAAg=</HashCode>
+      <FileName>Input\KeyboardWatcher.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ConsoleHexEditor.InputValidatorForShortcuts">
+    <Position X="24.75" Y="23" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAYAAAAAAAAAAAAAAAAAAAACAQAAA=</HashCode>
+      <FileName>InputValidators\InputValidatorForShortcuts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.ConsoleRenderer">
+    <Position X="7" Y="0.5" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>AYAAAAAQEgACAIAIAgAACAAAAABAQACAgAAAIAAAAIA=</HashCode>
+      <FileName>Renderer\ConsoleRenderer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ConsoleHexEditor.ConsoleKeyEventArgs">
+    <Position X="4.5" Y="13.75" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAQAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>EventArgs\ConsoleKeyEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.FileHelper">
+    <Position X="3.25" Y="3" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAAAAAAAAAA=</HashCode>
+      <FileName>StaticHelperClasses\FileHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.InputValidatorForTextMode">
+    <Position X="29.25" Y="22.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AQAIAIAACAAgAAAASAAAAAAAAAAAAAAAAEAABAAAAAA=</HashCode>
+      <FileName>InputValidators\InputValidatorForTextMode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.TextElementCreator">
+    <Position X="13" Y="35.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>BEAATQAAAiAEABQAAAiEFAAAAEAEABjBAAACCIoQQAI=</HashCode>
+      <FileName>TextElementCreator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="reader" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ConsoleHexEditor.HexNumber">
+    <Position X="22.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HexNumber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.PageManager">
+    <Position X="10" Y="8.75" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>BJgEBF0CQAARgkhAEEJSCEAggEAAQgQAAKWIghQQhOI=</HashCode>
+      <FileName>PageManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="page" />
+      <Field Name="shownPage" />
+      <Property Name="CurrentView" />
+      <Property Name="Page" />
+      <Property Name="ShownPage" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ConsoleHexEditor.PageEventArgs">
+    <Position X="19" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EventArgs\PageEventArgs.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Page" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ConsoleHexEditor.CustomEncoding">
+    <Position X="0.5" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAEAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StaticHelperClasses\CustomEncoding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.HexView">
+    <Position X="17.75" Y="17.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PageViewEnum\HexView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ConsoleHexEditor.TextView">
+    <Position X="17.75" Y="15" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PageViewEnum\TextView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ConsoleHexEditor.SplitView">
+    <Position X="14.75" Y="17.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PageViewEnum\SplitView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ConsoleHexEditor.NullView">
+    <Position X="15" Y="15" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PageViewEnum\NullView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ConsoleHexEditor.FileWatcher">
+    <Position X="1.25" Y="36.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAABAAAAAEAAABAAAAAAAI=</HashCode>
+      <FileName>FileWatcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.StringEventArgs">
+    <Position X="0.75" Y="7" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>EventArgs\StringEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.PageAndPositionEventArgs">
+    <Position X="13.5" Y="4" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EventArgs\PageAndPositionEventArgs.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Page" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ConsoleHexEditor.CustomEncodingEventArgs">
+    <Position X="1" Y="5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EventArgs\CustomEncodingEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.ApplicationParamsParser">
+    <Position X="3" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAgQAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>ApplicationParamsParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.InputValidatorForExitMenu">
+    <Position X="24.75" Y="25.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>IQAAAAAAgAEAAAAACAACAABAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>InputValidators\InputValidatorForExitMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.InputValidatorForNormalView">
+    <Position X="20.75" Y="23" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AQIAAIAAAAAgAABQYCARCAgIAAgACAAoAAEAAAIRABA=</HashCode>
+      <FileName>InputValidators\InputValidatorForNormalView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.InputValidatorForChangingCodePage">
+    <Position X="8.5" Y="24.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AQYEAAAAAAAAAABAIAQBCAAIAIIACggAAAEAAAIRABA=</HashCode>
+      <FileName>InputValidators\InputValidatorForChangingCodePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.InputValidatorForGoTo">
+    <Position X="12.75" Y="23" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AQYAAAAAAAAAAADAICAREQAYAAAACgAIAAAAAAoRABA=</HashCode>
+      <FileName>InputValidators\InputValidatorForGoTo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.InputvalidatorForFileSearching">
+    <Position X="29.25" Y="25.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AYAAAAAAAkAAQACAAAAAUAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>InputValidators\InputvalidatorForFileSearching.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.InputValidatorForPartialLoading">
+    <Position X="16.75" Y="23" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AQYAAAAAAEAAQACAICAQGAAIAAAACgAAAgEAAIIRABA=</HashCode>
+      <FileName>InputValidators\InputValidatorForPartialLoading.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.IntEventArgs">
+    <Position X="4.5" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EventArgs\IntEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.EncodingChooser">
+    <Position X="4.5" Y="20" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAiAAAAAAAAAAAAAAAIAAAAQhA=</HashCode>
+      <FileName>EncodingChooser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.UserInputCreator">
+    <Position X="42.25" Y="22.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AEgAiABQAAAQAAAACAAAAAAAABAAAAAQAoAAAAAEAAA=</HashCode>
+      <FileName>UserInputCreator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.GoToInputCreator">
+    <Position X="33.75" Y="22.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AEgAiABQAAAQAAAACAAIAAAAABAACAAQAoAAAAAEAAA=</HashCode>
+      <FileName>GoToInputCreator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.LongEventArgs">
+    <Position X="4.5" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>EventArgs\LongEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleHexEditor.PartialInputCreator">
+    <Position X="37.75" Y="22.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AEgAiABQAAAQAAAACAACAAAAABAAAAAQAoAIAAAEAAA=</HashCode>
+      <FileName>PartialInputCreator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ConsoleHexEditor.IRenderer">
+    <Position X="6.5" Y="36.5" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>AYAAAAAQEgACAIAIAAAACAAAAABAQACAgAAAIAAAAAA=</HashCode>
+      <FileName>Interfaces\IRenderer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ConsoleHexEditor.IInputWatcher">
+    <Position X="0.5" Y="19" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAACAAAAAAAAAAQAAAAAAAQAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IInputWatcher.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ConsoleHexEditor.ICurrentView">
+    <Position X="15.75" Y="13.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ICurrentView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
