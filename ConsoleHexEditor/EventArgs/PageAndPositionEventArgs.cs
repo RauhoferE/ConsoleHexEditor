@@ -9,10 +9,12 @@
 //-----------------------------------------------------------------------
 namespace ConsoleHexEditor
 {
+    using System;
+
     /// <summary>
     /// The <see cref="PageAndPositionEventArgs"/> class.
     /// </summary>
-    public class PageAndPositionEventArgs
+    public class PageAndPositionEventArgs : EventArgs
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PageAndPositionEventArgs"/> class.
@@ -32,7 +34,6 @@ namespace ConsoleHexEditor
         public PageElement Page
         {
             get;
-            private set;
         }
 
         /// <summary>
@@ -42,7 +43,6 @@ namespace ConsoleHexEditor
         public long PositionToMark
         {
             get;
-            private set;
         }
     }
 }

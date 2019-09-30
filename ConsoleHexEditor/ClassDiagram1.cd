@@ -15,14 +15,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ConsoleHexEditor.HexElement">
-    <Position X="23.25" Y="4" Width="2.25" />
+    <Position X="23.25" Y="4" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAIAAAAAAAABAAAAAAAEAAAAEAAAAAAAAAA=</HashCode>
       <FileName>HexElement.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ConsoleHexEditor.PageElement">
-    <Position X="20" Y="5.75" Width="1.5" />
+    <Position X="20" Y="5.75" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PageElement.cs</FileName>
@@ -30,13 +30,6 @@
   </Class>
   <Class Name="ConsoleHexEditor.Application">
     <Position X="1.5" Y="30" Width="5.75" />
-    <AssociationLine Name="encodingChooser" Type="ConsoleHexEditor.EncodingChooser" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="2.312" Y="30" />
-        <Point X="2.312" Y="21.923" />
-        <Point X="4.5" Y="21.923" />
-      </Path>
-    </AssociationLine>
     <AssociationLine Name="inputWatcher" Type="ConsoleHexEditor.IInputWatcher" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="1.5" Y="30" />
@@ -56,6 +49,8 @@
     <AssociationLine Name="editor" Type="ConsoleHexEditor.EditorForHexaElements" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="7.25" Y="31.129" />
+        <Point X="14.432" Y="31.129" Type="JumpStart" />
+        <Point X="14.599" Y="31.129" Type="JumpEnd" />
         <Point X="15.948" Y="31.129" Type="JumpStart" />
         <Point X="16.114" Y="31.129" Type="JumpEnd" />
         <Point X="18.229" Y="31.129" Type="JumpStart" />
@@ -74,6 +69,8 @@
     <AssociationLine Name="gotoValidator" Type="ConsoleHexEditor.InputValidatorForGoTo" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="7.25" Y="33.826" />
+        <Point X="14.432" Y="33.826" Type="JumpStart" />
+        <Point X="14.599" Y="33.826" Type="JumpEnd" />
         <Point X="16.031" Y="33.826" />
         <Point X="16.031" Y="28.209" />
       </Path>
@@ -83,6 +80,8 @@
         <Point X="7.25" Y="30.627" />
         <Point X="7.55" Y="30.627" />
         <Point X="7.55" Y="30.557" />
+        <Point X="14.432" Y="30.557" Type="JumpStart" />
+        <Point X="14.599" Y="30.557" Type="JumpEnd" />
         <Point X="15.948" Y="30.557" Type="JumpStart" />
         <Point X="16.114" Y="30.557" Type="JumpEnd" />
         <Point X="16.394" Y="30.557" />
@@ -99,6 +98,8 @@
     <AssociationLine Name="textValidator" Type="ConsoleHexEditor.InputValidatorForTextMode" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="7.25" Y="31.443" />
+        <Point X="14.432" Y="31.443" Type="JumpStart" />
+        <Point X="14.599" Y="31.443" Type="JumpEnd" />
         <Point X="15.948" Y="31.443" Type="JumpStart" />
         <Point X="16.114" Y="31.443" Type="JumpEnd" />
         <Point X="18.229" Y="31.443" Type="JumpStart" />
@@ -115,6 +116,8 @@
     <AssociationLine Name="userInputCreator" Type="ConsoleHexEditor.UserInputCreator" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="7.25" Y="30.939" />
+        <Point X="14.432" Y="30.939" Type="JumpStart" />
+        <Point X="14.599" Y="30.939" Type="JumpEnd" />
         <Point X="15.948" Y="30.939" Type="JumpStart" />
         <Point X="16.114" Y="30.939" Type="JumpEnd" />
         <Point X="18.229" Y="30.939" Type="JumpStart" />
@@ -138,17 +141,20 @@
         <Point X="42.25" Y="27.046" />
       </Path>
     </AssociationLine>
+    <AssociationLine Name="encodingChooser" Type="ConsoleHexEditor.EncodingChooser" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.312" Y="30" />
+        <Point X="2.312" Y="21.923" />
+        <Point X="4.5" Y="21.923" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AUBiAAAAAGBQkARAAASAAQUAwQARGgIAIEAVAQgIgAA=</HashCode>
       <FileName>Application.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="encodingChooser" />
-      <Field Name="fileWatcher" />
       <Field Name="inputWatcher" />
       <Field Name="renderer" />
-      <Field Name="textElementCreator" />
-      <Field Name="windowWatcher" />
       <Field Name="pageManager" />
       <Field Name="editor" />
       <Field Name="codePageValidator" />
@@ -162,6 +168,10 @@
       <Field Name="fileSearchingValidator" />
       <Field Name="gotoInput" />
       <Field Name="partialInputCreator" />
+      <Field Name="textElementCreator" />
+      <Field Name="fileWatcher" />
+      <Field Name="windowWatcher" />
+      <Field Name="encodingChooser" />
     </ShowAsAssociation>
   </Class>
   <Class Name="ConsoleHexEditor.EditorForHexaElements">
@@ -175,7 +185,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ConsoleHexEditor.WindowWatcher">
-    <Position X="3.25" Y="40.5" Width="2.25" />
+    <Position X="3.25" Y="40.5" Width="3.75" />
     <TypeIdentifier>
       <HashCode>BAAAABAAAAAAAAEAAgAAAAAAAAAAAAAAAAAAAAAQAIA=</HashCode>
       <FileName>WindowWatcher.cs</FileName>
@@ -313,7 +323,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ConsoleHexEditor.StringEventArgs">
-    <Position X="0.75" Y="7" Width="2.25" />
+    <Position X="0.75" Y="7" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
       <FileName>EventArgs\StringEventArgs.cs</FileName>
@@ -386,7 +396,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ConsoleHexEditor.IntEventArgs">
-    <Position X="4.5" Y="7" Width="2" />
+    <Position X="4.5" Y="7" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EventArgs\IntEventArgs.cs</FileName>

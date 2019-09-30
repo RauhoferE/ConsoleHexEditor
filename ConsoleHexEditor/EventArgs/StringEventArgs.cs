@@ -9,10 +9,12 @@
 //-----------------------------------------------------------------------
 namespace ConsoleHexEditor
 {
+    using System;
+
     /// <summary>
     /// The <see cref="StringEventArgs"/> class.
     /// </summary>
-    public class StringEventArgs
+    public class StringEventArgs : EventArgs
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="StringEventArgs"/> class.
@@ -30,7 +32,6 @@ namespace ConsoleHexEditor
         public string Text
         {
             get;
-            private set;
         }
     }
 }

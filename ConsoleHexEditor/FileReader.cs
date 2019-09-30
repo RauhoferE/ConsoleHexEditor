@@ -65,9 +65,12 @@ namespace ConsoleHexEditor
             get
             {
                 return this.pagesize;
-
             }
-            private set { this.pagesize = value; }
+
+            private set
+            {
+                this.pagesize = value;
+            }
         }
 
         /// <summary>
@@ -76,8 +79,15 @@ namespace ConsoleHexEditor
         /// <value> A normal <see cref="string"/>. </value>
         public string Path
         {
-            get { return this.path; }
-            private set { this.path = value; }
+            get
+            {
+                return this.path;
+            }
+
+            private set
+            {
+                this.path = value;
+            }
         }
 
         /// <summary>

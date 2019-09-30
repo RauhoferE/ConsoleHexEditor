@@ -14,7 +14,7 @@ namespace ConsoleHexEditor
     /// <summary>
     /// The <see cref="ConsoleKeyEventArgs"/> class.
     /// </summary>
-    public class ConsoleKeyEventArgs
+    public class ConsoleKeyEventArgs : EventArgs
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ConsoleKeyEventArgs"/> class.
@@ -36,7 +36,6 @@ namespace ConsoleHexEditor
         public ConsoleKey Key
         {
             get;
-            private set;
         }
 
         /// <summary>
@@ -46,7 +45,6 @@ namespace ConsoleHexEditor
         public ConsoleModifiers Modifier
         {
             get;
-            private set;
         }
 
         /// <summary>
@@ -56,7 +54,6 @@ namespace ConsoleHexEditor
         public char ConsoleChar
         {
             get;
-            private set;
         }
     }
 }

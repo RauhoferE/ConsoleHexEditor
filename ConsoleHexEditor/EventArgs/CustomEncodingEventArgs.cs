@@ -9,12 +9,13 @@
 //-----------------------------------------------------------------------
 namespace ConsoleHexEditor
 {
+    using System;
     using System.Text;
 
     /// <summary>
     /// The <see cref="CustomEncodingEventArgs"/> class.
     /// </summary>
-    public class CustomEncodingEventArgs
+    public class CustomEncodingEventArgs : EventArgs
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEncodingEventArgs"/> class.
@@ -32,7 +33,6 @@ namespace ConsoleHexEditor
         public Encoding Current
         {
             get;
-            private set;
         }
     }
 }

@@ -9,10 +9,12 @@
 //-----------------------------------------------------------------------
 namespace ConsoleHexEditor
 {
+    using System;
+
     /// <summary>
     /// The <see cref="LongEventArgs"/> class.
     /// </summary>
-    public class LongEventArgs
+    public class LongEventArgs : EventArgs
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LongEventArgs"/> class.
@@ -30,7 +32,6 @@ namespace ConsoleHexEditor
         public long Value
         {
             get;
-            private set;
         }
     }
 }

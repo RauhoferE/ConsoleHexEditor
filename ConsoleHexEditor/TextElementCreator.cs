@@ -334,6 +334,10 @@ namespace ConsoleHexEditor
 
                 this.FireOnPageCreated(new PageEventArgs(tempP));
             }
+            else
+            {
+                this.FireOnMessageCreated(new StringEventArgs("End Reached."));
+            }
         }
 
         /// <summary>
@@ -370,6 +374,10 @@ namespace ConsoleHexEditor
                 }
 
                 this.FireOnPageCreated(new PageEventArgs(tempP));
+            }
+            else
+            {
+                this.FireOnMessageCreated(new StringEventArgs("Beginn Reached."));
             }
         }
 
