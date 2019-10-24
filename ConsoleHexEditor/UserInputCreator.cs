@@ -83,7 +83,7 @@ namespace ConsoleHexEditor
         public void EnterCharacter(object sender, StringEventArgs e)
         {
             this.userInput = this.userInput + e.Text;
-            this.FireOnUserInputPrint(new StringEventArgs(this.userInput));
+            this.FireOnUserInputPrint(new StringEventArgs(e.Text));
         }
 
         /// <summary>

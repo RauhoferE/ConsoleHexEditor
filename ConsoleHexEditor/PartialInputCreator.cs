@@ -65,6 +65,12 @@ namespace ConsoleHexEditor
         /// <param name="e"> The <see cref="EventArgs"/>. </param>
         public void SendInput(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(this.userInput))
+            {
+                this.FireOnErrorMessagePrint(new StringEventArgs("Error please put in  an input."));
+                return;
+            }
+
             if (int.Parse(this.userInput) < 1 || int.Parse(this.userInput) > 50)
             {
                 this.FireOnErrorMessagePrint(new StringEventArgs("Allowed is 1 - 50, Only full numbers"));
@@ -85,7 +91,7 @@ namespace ConsoleHexEditor
         public void EnterCharacter(object sender, StringEventArgs e)
         {
             this.userInput = this.userInput + e.Text;
-            this.FireOnUserInputPrint(new StringEventArgs(this.userInput));
+            this.FireOnUserInputPrint(new StringEventArgs(e.Text));
         }
 
         /// <summary>

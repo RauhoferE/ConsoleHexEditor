@@ -53,5 +53,20 @@ namespace ConsoleHexEditor
                 throw new ArgumentException("Error: " + e.Message);
             }
         }
+
+        /// <summary>
+        /// This method returns the absolute path of the file.
+        /// </summary>
+        /// <param name="path"> The file path. </param>
+        /// <returns> It returns the absolute path. </returns>
+        public static string ReturnAbsolutePath(string path)
+        {
+            if (Path.IsPathRooted(path))
+            {
+                return path;
+            }
+
+            return Directory.GetCurrentDirectory() + @"\" + path;
+        }
     }
 }

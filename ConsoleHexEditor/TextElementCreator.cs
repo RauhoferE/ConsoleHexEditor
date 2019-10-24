@@ -489,6 +489,17 @@ namespace ConsoleHexEditor
                     this.CountToLastPositionOnCurrentpage();
                     return true;
                 }
+                else if (this.currentPosCount < this.MaxLineCount)
+                {
+                    this.FireOnMessageCreated(new StringEventArgs("Please wait."));
+                    this.Buffer = this.reader.GetNextCharactersFromFile();
+                    this.currentPosCount = this.LastPosOnCurrentPage;
+                    this.CharacterCount = this.LastCharacterCountOnCurrrentPage;
+                    this.CurrentPage++;
+                    this.CurrentLocalPage = 0;
+                    this.CountToLastPositionOnCurrentpage();
+                    return true;
+                }
 
                 return false;
             }

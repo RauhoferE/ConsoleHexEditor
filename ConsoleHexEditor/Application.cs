@@ -248,13 +248,22 @@ namespace ConsoleHexEditor
             else
             {
                 this.renderer.PrintMessage(this, new StringEventArgs("Please wait while Page is loading."));
-                
-                this.textElementCreator = new TextElementCreator(appParser.FileName);
-                this.fileWatcher = new FileWatcher(appParser.FileName);
-                this.fileWatcher.OnFileChanged += this.PrintFileErrorAndDeleteFile;
-                this.fileWatcher.Run();
 
-                this.ActivatePageManagerAndCreatorElements();
+                try
+                {
+                    string correctedPath = FileHelper.ReturnAbsolutePath(appParser.FileName);
+                    this.textElementCreator = new TextElementCreator(correctedPath);
+                    this.fileWatcher = new FileWatcher(correctedPath);
+                    this.fileWatcher.OnFileChanged += this.PrintFileErrorAndDeleteFile;
+                    this.fileWatcher.Run();
+
+                    this.ActivatePageManagerAndCreatorElements();
+                }
+                catch (Exception e)
+                {
+                    this.renderer.PrintErrorMessage(this, new StringEventArgs("Error couldnt open file!"));
+                    this.ActivateNoFileInput();
+                }
             }
 
             this.inputWatcher.Start();
@@ -531,11 +540,20 @@ namespace ConsoleHexEditor
             this.inputWatcher.OnInputReceived -= this.shortcutValidator.InterpretInput;
             this.renderer.PrintMessage(this, new StringEventArgs("Please wait while Page is loading."));
 
-            this.textElementCreator = new TextElementCreator(e.Text);
-            this.fileWatcher = new FileWatcher(e.Text);
-            this.fileWatcher.OnFileChanged += this.PrintFileErrorAndDeleteFile;
-            this.fileWatcher.Run();
-            this.ActivatePageManagerAndCreatorElements();
+            try
+            {
+                string correctedPath = FileHelper.ReturnAbsolutePath(e.Text);
+                this.textElementCreator = new TextElementCreator(correctedPath);
+                this.fileWatcher = new FileWatcher(correctedPath);
+                this.fileWatcher.OnFileChanged += this.PrintFileErrorAndDeleteFile;
+                this.fileWatcher.Run();
+                this.ActivatePageManagerAndCreatorElements();
+            }
+            catch (Exception exception)
+            {
+                this.renderer.PrintErrorMessage(this, new StringEventArgs("Error file couldnt be opened."));
+                this.ActivateNoFileInput();
+            }
         }
 
         /// <summary>

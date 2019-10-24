@@ -370,7 +370,6 @@ namespace ConsoleHexEditor
         /// <param name="e"> The <see cref="StringEventArgs"/>. </param>
         public void PrintUserInput(object sender, StringEventArgs e)
         {
-            Console.SetCursorPosition(0, Console.CursorTop);
             Console.Write(e.Text);
         }
 
@@ -440,9 +439,18 @@ namespace ConsoleHexEditor
         /// <param name="e"> The <see cref="StringEventArgs"/>. </param>
         public void DeleteUserInput(object sender, EventArgs e)
         {
-            Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
-            Console.Write(" ");
-            Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+            if (Console.CursorLeft == 0 && Console.CursorTop > 1)
+            {
+                Console.SetCursorPosition(Console.WindowWidth - 1, Console.CursorTop - 1);
+                Console.Write(" ");
+                Console.SetCursorPosition(Console.WindowWidth - 1, Console.CursorTop - 1);
+            }
+            else
+            {
+                Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+                Console.Write(" ");
+                Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+            }
         }
     }
 }

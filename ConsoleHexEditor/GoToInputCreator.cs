@@ -98,7 +98,7 @@ namespace ConsoleHexEditor
         public void EnterCharacter(object sender, StringEventArgs e)
         {
             this.userInput = this.userInput + e.Text;
-            this.FireOnUserInputPrint(new StringEventArgs(this.userInput));
+            this.FireOnUserInputPrint(new StringEventArgs(e.Text));
         }
 
         /// <summary>
@@ -108,7 +108,21 @@ namespace ConsoleHexEditor
         /// <param name="e"> The <see cref="EventArgs"/>. </param>
         public void SendInput(object sender, EventArgs e)
         {
-            if (this.maxBytes > long.Parse(this.userInput, System.Globalization.NumberStyles.HexNumber))
+            if (string.IsNullOrEmpty(this.userInput))
+            {
+                this.FireOnErrorMessagePrint(new StringEventArgs("Error put in a offset."));
+                return;
+            }
+
+            long temp;
+            if (!long.TryParse(this.userInput, out temp))
+            {
+                this.FireOnErrorMessagePrint(new StringEventArgs("Error number to high"));
+                this.FireOnUserInputPrint(new StringEventArgs(this.userInput));
+                return;
+            }
+
+            if (this.maxBytes < long.Parse(this.userInput, System.Globalization.NumberStyles.HexNumber))
             {
                 this.FireOnErrorMessagePrint(new StringEventArgs("Error offset to high"));
                 this.FireOnUserInputPrint(new StringEventArgs(this.userInput));

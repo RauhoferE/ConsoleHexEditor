@@ -106,7 +106,20 @@ namespace ConsoleHexEditor
         /// <param name="e"> The <see cref="PageEventArgs"/>. </param>
         public void SetPage(object sender, PageEventArgs e)
         {
-            this.Page = e.Page;
+            this.Page = new PageElement();
+            foreach (var item in e.Page.HexElements)
+            {
+                var hex = new HexElement(item.TextSegment);
+                foreach (var item2 in item.HexSegment)
+                {
+                    var hexseg = new HexNumber(item2.Number);
+                    hexseg.Position = item2.Position;
+                    hex.HexSegment.Add(hexseg);
+                }
+
+                this.Page.HexElements.Add(hex);
+            }
+
             this.Position = 0;
             this.CalculateTotalHexNumbersOnPage();
 
