@@ -384,7 +384,7 @@ namespace ConsoleHexEditor
             {
                 position = Convert.ToInt64(e.Text, 16);
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 throw new ArgumentException("Error couldnt convert the position.");
             }

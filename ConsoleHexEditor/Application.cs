@@ -261,7 +261,7 @@ namespace ConsoleHexEditor
                 }
                 catch (Exception e)
                 {
-                    this.renderer.PrintErrorMessage(this, new StringEventArgs("Error couldnt open file!"));
+                    this.renderer.PrintErrorMessage(this, new StringEventArgs("Error couldnt open file!" + e.Message));
                     this.ActivateNoFileInput();
                 }
             }
@@ -551,7 +551,7 @@ namespace ConsoleHexEditor
             }
             catch (Exception exception)
             {
-                this.renderer.PrintErrorMessage(this, new StringEventArgs("Error file couldnt be opened."));
+                this.renderer.PrintErrorMessage(this, new StringEventArgs("Error file couldnt be opened." + exception.Message));
                 this.ActivateNoFileInput();
             }
         }
